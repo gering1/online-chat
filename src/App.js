@@ -1,11 +1,11 @@
 import React from 'react';
-import  Dashboard  from './Dashboard.js'
+import  Dashboard  from './Dashboard/Dashboard.js'
 import './App.css';
 import Appbar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import Paper from '@material-ui/core/Paper'
 import {ThemeProvider,createMuiTheme} from  '@material-ui/core/styles'
-import CheckUser from './CheckUser.js'
+import CheckUser from './User/CheckUser.js'
 import io from 'socket.io-client'
 
 

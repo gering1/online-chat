@@ -7,7 +7,7 @@ import TextField from '@material-ui/core/TextField'
 import MessageBox from './MessageBox.js'
 import Typography from '@material-ui/core/Typography'
 import {makeStyles } from '@material-ui/core/styles';
-import ActiveUsers from './ActiveUsers.js'
+import ActiveUsers from '../User/ActiveUsers.js'
 import MenuItem from '@material-ui/core/MenuItem';
 import ChatWindow from './ChatWindow.js'
 import MenuList from '@material-ui/core/MenuList';  
@@ -27,7 +27,7 @@ const useStyles = makeStyles(theme => ({
         flexDirection: "column",
         width: "900px",
         
-      
+
     },
  
 }))
