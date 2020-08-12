@@ -1,25 +1,45 @@
 import React from 'react';
-import logo from './logo.svg';
+import  Dashboard  from './Dashboard.js'
 import './App.css';
+import Appbar from '@material-ui/core/AppBar'
+import Toolbar from '@material-ui/core/Toolbar'
+import Paper from '@material-ui/core/Paper'
+import {ThemeProvider,createMuiTheme} from  '@material-ui/core/styles'
+import CheckUser from './CheckUser.js'
+import io from 'socket.io-client'
+
 
 function App() {
+  const theme = createMuiTheme({
+    palette: {
+      primary: {
+        main: '#f3e5f5',
+      },
+      secondary: {
+        main: '#ad1457',
+      },
+      background: {
+        paper: "#303030",
+        
+      },
+      typography: {
+        fontFamily: "Nunito"
+      },
+      type: "dark"
+
+    }
+    
+  })
   return (
+    <ThemeProvider theme = {theme}>
+    <Paper style = {{height:"100vh"}}>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     
+      <CheckUser />
+
     </div>
+    </Paper>
+    </ThemeProvider>
   );
 }
 
